@@ -668,5 +668,10 @@ class AtsukoArrModel{
 			return $return;
 		}
 	}
+
+	public function change($arr){
+		$this->arr=$this->old=$arr;
+		return $this;
+	}
 }
 ?>

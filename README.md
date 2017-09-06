@@ -85,3 +85,7 @@ $a->end()
 vkSort
 $a->vkSort($arr=false,$order='v desc,k desc')
 返回处理后的数组，输入为一维数组，第二个参数是排序规则，可以按照一维数组的键和值来排序
+
+change
+$a->change($arr)
+重新设定处理数组，该设定同时影响end返回数组
