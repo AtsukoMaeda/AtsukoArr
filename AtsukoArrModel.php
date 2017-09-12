@@ -673,5 +673,39 @@ class AtsukoArrModel{
 		$this->arr=$this->old=$arr;
 		return $this;
 	}
+
+	public function arrGetAll($arr,$connect=','){
+		$keys=[];
+		$flag=true;
+		$count=count($arr);
+		foreach ($arr as $k => $v) {
+			if($flag){
+				$all=$v;
+				$flag=false;
+			}
+			$keys[]=$k;
+		}
+		$i=1;
+		while($i<$count){
+			$stor=[];
+			foreach ($all as $v) {
+				foreach ($arr[$keys[$i]] as  $v1) {
+					$stor[]=$v.$connect.$v1;
+				}
+			}
+			$all=$stor;
+			$i++;
+		}
+		$return=[];
+		foreach ($all as $v) {
+			$value=explode($connect,$v);
+			$stor=[];
+			foreach ($keys as $k1 => $v1) {
+				$stor[$v1]=$value[$k1];
+			}
+			$return[]=$stor;
+		}
+		return $return;
+	}
 }
 ?>

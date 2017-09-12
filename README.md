@@ -89,3 +89,7 @@ $a->vkSort($arr=false,$order='v desc,k desc')
 change
 $a->change($arr)
 重新设定处理数组，该设定同时影响end返回数组
+
+arrGetAll
+$a->arrGetAll($arr)
+给定分开的数组，得出所有组合，如$arr=['品牌'=>['索尼','联想'],'尺寸'=>[18]]，得出$return=[[品牌=>'索尼','尺寸'=>18],['品牌'=>'联想','尺寸'=>18]]
