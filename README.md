@@ -3,9 +3,7 @@ PHP数组处理
 $a=new AtsukoArr($arr);
 where
 $a->where($where)
-查找方法，$where可以是数组也可以是字符串，数组以['id'=>1,'name'=>'atsuko'...]格式，
-字符串如果有in查询，in查询格式为'id in(1,2,6,4)'，in查询后面可以跟对比查询，用and连接，
-如'id in(1,2,3,4,5) and age>14 and age<25'，notin用法同in，如果需要多个and可以用数组['id'=>1,'name'=>'atsuko'...]
+查找方法，$where可以是数组也可以是字符串，数组以['id'=>1,'name'=>'atsuko'...]格式，字符串如果有in查询，in查询格式为'id in(1,2,6,4)'，in查询后面可以跟对比查询，用and连接，如'id in(1,2,3,4,5) and age>14 and age<25'，notin用法同in，如果需要多个and可以用数组['id'=>1,'name'=>'atsuko'...]，支持or查询，支持like查询
 
 order
 $a->order($order)
