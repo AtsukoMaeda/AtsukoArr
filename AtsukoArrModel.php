@@ -62,8 +62,8 @@ class AtsukoArrModel{
 			$flag=preg_match($preg,$where,$arr);
 			if($flag){
 				$like=explode(' ',$arr[0]);
-				$search=str_replace('%','',$like[2]);
-				$pregarr=['/^%.*%$/'=>'/.*'.$search.'.*/','/^%.*[^%]$/'=>'/.*'.$search.'$/','/^[^%].*%$/'=>'/^'.$search.'.*/','/[^%].*[^%]/'=>'/^'.$search.'$/'];
+				$search=str_replace('%','.*',$like[2]);
+				$pregarr=['/^%.*%$/'=>'/'.$search.'/','/^%.*[^%]$/'=>'/'.$search.'$/','/^[^%].*%$/'=>'/^'.$search.'/','/^[^%].*[^%]$/'=>'/^'.$search.'$/'];
 				foreach ($this->arr as $v) {
 					foreach ($pregarr as $k1=> $v1) {
 						if(preg_match($k1,$like[2])&&preg_match($v1,$v[$like[0]])){
