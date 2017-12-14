@@ -91,3 +91,11 @@ $a->change($arr)
 arrGetAll
 $a->arrGetAll($arr)
 给定分开的数组，得出所有组合，如$arr=['品牌'=>['索尼','联想'],'尺寸'=>[18]]，得出$return=[[品牌=>'索尼','尺寸'=>18],['品牌'=>'联想','尺寸'=>18]]
+
+run
+AtsukoArr::run($arr)
+静态方法，无需外部实例化，返回一个实例化对象
+
+valueToKey
+$a->valueToKey($key)
+以自定义的某个键名的值来为数据分组
