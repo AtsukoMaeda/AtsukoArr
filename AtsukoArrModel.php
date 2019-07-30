@@ -29,6 +29,9 @@ class AkbArr{
         $this->$key=$value;
     }
 
+    /**
+     * 
+     */
     public function where($where){
         if(is_string($where)){
             $preg=['/!=/'=>'!','/<=/'=>'-','/>=/'=>'+'];
@@ -620,7 +623,7 @@ class AkbArr{
         return $this;
     }
 
-    public function arrGetAll($arr,$connect=','){
+    public function arrGetAll($arr, $connect=','){
         $keys=[];
         $flag=true;
         $count=count($arr);
