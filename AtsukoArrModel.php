@@ -19,6 +19,9 @@ class AkbArr{
         $this->old=$arr;
     }
 
+    /**
+     * 
+     */
     public function __get($value){
         if($this->$value){
             return $this->$value;
