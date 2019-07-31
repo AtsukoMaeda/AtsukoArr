@@ -20,7 +20,7 @@ class AkbArr{
     }
 
     /**
-     * 
+     * 666
      */
     public function __get($value){
         if($this->$value){
