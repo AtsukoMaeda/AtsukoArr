@@ -33,7 +33,7 @@ class AkbArr{
     }
 
     /**
-     * 
+     * 查询条件
      */
     public function where($where){
         if(is_string($where)){
